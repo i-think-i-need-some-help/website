@@ -19,11 +19,11 @@ jobs:
 
       - name: Install gh-pages
         run: npm install gh-pages -g
-      
+
       - name: Deploy to Github Pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_AUTHOR_NAME: github-actions
+          GIT_AUTHOR_EMAIL: github-actions@github.com
         run: |
-          git config --global user.name 'github-actions'
-          git config --global user.email 'github-actions@github.com'
           gh-pages -d . --branch gh-pages
