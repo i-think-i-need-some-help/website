@@ -27,3 +27,4 @@ jobs:
           GIT_AUTHOR_EMAIL: github-actions@github.com
         run: |
           gh-pages -d . --branch gh-pages
+        working-directory: .
